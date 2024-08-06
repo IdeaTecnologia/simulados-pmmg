@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -20,5 +21,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "simulados-pmmg"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 include(":app")
- 
+include(":feature:home")
+include(":designsystem")
