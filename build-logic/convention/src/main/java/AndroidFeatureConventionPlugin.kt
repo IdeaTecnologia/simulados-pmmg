@@ -1,6 +1,6 @@
 import com.android.build.gradle.LibraryExtension
-import com.ideatecnologia.buildlogic.configureGradleManagedDevices
-import com.ideatecnologia.buildlogic.libs
+import com.ideatecnologia.simuladospmmg.buildlogic.configureGradleManagedDevices
+import com.ideatecnologia.simuladospmmg.buildlogic.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -25,12 +25,16 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 //add("implementation", libs.findLibrary("androidx.hilt.navigation.compose").get())
                 add("implementation", libs.findLibrary("androidx.lifecycle.runtimeCompose").get())
                 add("implementation", libs.findLibrary("androidx.lifecycle.viewModelCompose").get())
+                add("implementation", libs.findLibrary("koin.android").get())
+                add("implementation", libs.findLibrary("koin.compose").get())
+                add("implementation", libs.findLibrary("koin.compose").get())
                 //add("implementation", libs.findLibrary("androidx.tracing.ktx").get())
 
                 add(
                     "androidTestImplementation",
                     libs.findLibrary("androidx.lifecycle.runtimeTesting").get()
                 )
+                add("testImplementation", libs.findLibrary("mockk").get())
             }
         }
     }

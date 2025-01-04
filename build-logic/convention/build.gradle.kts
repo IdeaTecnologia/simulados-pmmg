@@ -31,6 +31,7 @@ dependencies {
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
+    compileOnly(libs.koin.core)
 }
 
 tasks {
@@ -62,5 +63,17 @@ gradlePlugin {
             id = "simuladospmmg.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("androidRoom") {
+            id = "simuladospmmg.android.room"
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("androidFirebase") {
+            id = "simuladospmmg.android.application.firebase"
+            implementationClass = "AndroidApplicationFirebaseConventionPlugin"
+        }
+        /*register("koin") {
+            id = "simuladospmmg.koin"
+            implementationClass = "KoinConventionPlugin"
+        }*/
     }
 }

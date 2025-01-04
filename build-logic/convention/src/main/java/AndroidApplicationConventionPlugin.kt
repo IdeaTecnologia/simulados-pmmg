@@ -1,6 +1,6 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.ideatecnologia.buildlogic.configureGradleManagedDevices
-import com.ideatecnologia.buildlogic.configureKotlinAndroid
+import com.ideatecnologia.simuladospmmg.buildlogic.configureGradleManagedDevices
+import com.ideatecnologia.simuladospmmg.buildlogic.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

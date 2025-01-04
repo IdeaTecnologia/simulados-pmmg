@@ -1,13 +1,7 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -27,3 +21,5 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":feature:home")
 include(":designsystem")
+include(":core:database")
+include(":core:navigation")
